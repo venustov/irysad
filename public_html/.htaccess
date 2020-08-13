@@ -1,0 +1,31 @@
+RewriteEngine On
+Options +FollowSymlinks
+RewriteBase /
+RewriteRule ^index.html$ /index.php
+
+RewriteRule ^ref_(.*)$ /index.php?referer=$1
+RewriteRule ^u(.*)$ /index.php?referer=$1
+
+RewriteRule ^articles/(.*).html$ /article.php?id=$1
+RewriteRule ^articles/(.*)/ref_(.*)$ /article.php?id=$1&referer=$2
+RewriteRule ^articles/(.*)/u(.*)$ /article.php?id=$1&referer=$2
+
+RewriteRule ^shop/status/(.*)/prev/(.*)$ /shop.php?status=$1&prev=$2
+RewriteRule ^shop/urozhay/(.*)/prev/(.*)$ /shop.php?urozhay=$1&prev=$2
+
+RewriteRule ^shop/(.*)/$ /shop.php?prev=$1
+RewriteRule ^shop/(.*)/u(.*)$ /shop.php?prev=$1&referer=$2
+RewriteRule ^shop/u(.*)/(.*).html$ /item.php?referer=$1&id=$2
+RewriteRule ^shop/(.*)/(.*).html$ /item.php?prev=$1&id=$2
+RewriteRule ^shop/(.*).html$ /item.php?id=$1
+
+RewriteRule ^photo/(.*)/(.*)$ /photo.php?fold=$1&photo=$2
+
+RewriteRule ^news/(.*)$ /news.php?id=$1
+
+ErrorDocument 401 http://vkontakte.ru/club13592926
+ErrorDocument 403 http://vkontakte.ru/club13592926
+ErrorDocument 404 http://vkontakte.ru/club13592926
+ErrorDocument 500 http://vkontakte.ru/club13592926
+
+php_flag register_globals off

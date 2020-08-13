@@ -1,0 +1,16 @@
+body {background:#D1D1D1;margin-top:3px;}
+a:link {color:blue; text-decoration:none;}
+a:visited {color:blue; text-decoration:none;}
+a:hover {color:#A8A8A8; text-decoration:none;}
+a:active {color:#A8A8A8; text-decoration:none;}
+a.menu:link    {color:black;font-family:verdana;font-size:12px;text-decoration:none;}
+a.menu:visited {color:black;font-family:verdana;font-family:verdana;font-size:12px;text-decoration:none;}
+a.menu:hover   {color:gray;font-family:verdana; text-decoration:none;}
+a.menu:active  {color:gray;font-family:verdana; text-decoration:none;}
+.exp:link {color:green; text-decoration:none;}
+.exp:visited {color:green; text-decoration:none;}
+.exp:hover {color:#A8A8A8; text-decoration:underline;}
+.exp:active {color:#A8A8A8; text-decoration:none;}
+input {border:1px solid black; font-size:12; background-color:white;}
+select {border:1px solid black; font-size:12; background-color:white;}
+.ft {font-size:12px;font-family:verdana;}
